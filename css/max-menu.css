@@ -1,0 +1,293 @@
+header {
+    width: 100%;
+    height: 50px;
+    background: rgb(0, 0, 0,.5);
+    color: #fff;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+header .max-title {
+    float: left;
+}
+
+#menu-bar {
+    display: none;
+}
+
+header label {
+    float: right;
+    font-size: 28px;
+    margin: 6px;
+    cursor: pointer;
+}
+
+header .contenedor {
+    display: table;
+}
+
+.nav-menu {
+    position: absolute;
+    width: 100%;
+    top: 50px;
+    left: 0;
+    height: 100vh;
+    background: rgb(0, 0, 0,.9);
+    transform: translateX(-100%);
+    transition: all .5s;
+}
+
+.nav-menu .menu--link {
+    display: block;
+    color: #fff;
+    height: 50px;
+    text-decoration: none;
+    border-bottom: 1px solid #fff;
+    border-top: 1px solid #fff;
+    padding: 12px;
+}
+
+.nav-menu li {
+    width: 100%;
+    transition: all .3s;
+}
+
+.nav-menu li:nth-child(1):hover {
+   background: linear-gradient(to left, rgba(0,0,0,.8), rgb(34, 153, 85,.4));
+}
+
+.nav-menu li:nth-child(2):hover {
+    background: linear-gradient(to left, rgba(0,0,0,.8), rgb(85, 102, 136,.4));
+}
+
+.nav-menu li:nth-child(3):hover {
+    background: linear-gradient(to left, rgba(0,0,0,.8), rgb(153, 136, 17,.4));
+}
+
+.nav-menu li:nth-child(4):hover {
+    background: linear-gradient(to left, rgba(0,0,0,.8), rgb(102, 68, 17,.4));
+}
+
+.nav-menu li:nth-child(5):hover {
+    background: linear-gradient(to left, rgba(0,0,0,.8), rgb(51, 136, 153,.4));
+}
+
+.nav-menu li:nth-child(6):hover {
+    background: linear-gradient(to left, rgba(0,0,0,.8), rgb(119, 153, 17,.4));
+}
+
+#menu-bar:checked ~ .nav-menu {
+    transform: translateX(0%);
+}
+
+/*-------------------------------------------------Responsive-----------------------------------------------------*/
+
+@media screen and (min-width:1024px) {
+
+    header .fa-bars {
+        display: none;
+    }
+
+    header {
+        background: transparent;
+        position: absolute;
+        width: 100%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 1;
+        padding: 9px;
+    }
+    
+    .nav-menu .menu--link {
+        text-align: center;
+        text-decoration: none;
+        color: #fff;
+        height: auto;
+        width: 130px;
+       border: none;
+        padding: none;
+      height: auto;
+    }
+    
+    header ul {
+        display: flex;
+        list-style: none;
+    }
+    
+    header .max-title {
+        float: left;
+        font-size: 2rem;
+    }
+    
+    .nav-menu {
+        position: static;
+        width: auto;
+        height: auto;
+        transform: translateX(0%);
+        float: right;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        background: transparent;
+    }
+    
+  
+    .nav-menu li:nth-child(1):hover {
+        border-bottom: 1px solid rgb(34, 153, 85);
+        background: none;
+    }
+    
+    .nav-menu li:nth-child(2):hover {
+        border-bottom: 1px solid rgb(85, 102, 136);
+        background: none;
+    }
+    
+    .nav-menu li:nth-child(3):hover {
+        border-bottom: 1px solid rgb(153, 136, 17);
+        background: none;
+    }
+    
+    .nav-menu li:nth-child(4):hover {
+        border-bottom: 1px solid rgb(102, 68, 17);
+        background: none;
+    }
+    
+    .nav-menu li:nth-child(5):hover {
+        border-bottom: 1px solid rgb(51, 136, 153);
+        background: none;
+    }
+    
+    .nav-menu li:nth-child(6):hover {
+        border-bottom: 1px solid rgb(119, 153, 17);
+        background: none;
+    }
+    
+    .menu--menuSub {
+        position: absolute;
+        margin: auto;
+        background: rgba(0, 0, 0, 0.999);
+        width: 100%;
+        top: 100%;
+        left: 0;
+        right: 0;
+        opacity: 1;
+        visibility: hidden;
+        padding: 5px;
+        transition: linear .1s;
+    }
+    
+    .menu--menuSub .column--33:nth-child(1) {
+        border-right: 1px solid rgb(88, 88, 88);
+    }
+    
+    
+    .menu--menuSub .column--33:nth-child(2) {
+        border-right: 1px solid rgb(88, 88, 88);
+    }
+    
+    .menu--menuSub .mini-title {
+        text-align: center;
+    }
+    
+    .menu--menuSub .personality {
+        text-align: center;
+        margin: auto;
+        margin-top: 15px;
+    }
+    
+    .menu--menuSub .personality a {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        background: rgba(255, 255, 255);
+        padding: 3px;
+        border-radius: 5px;
+        font-weight: 800;
+        border: 1px solid #fff;
+    }
+    
+    .menu--menuSub .personality a:hover {
+        transition: 0.2s;
+        padding: 5px; 
+    }
+    
+    
+    .menu--menuSub img {
+        width: 400px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 50px;
+        margin: auto;
+    } 
+    
+    .menu--menuSub .menu--link-sub {
+        width: 95%;
+        text-decoration: none;
+        color: #fff;
+    }
+    
+    .menu--menuSub li:nth-child(1):hover {
+      transition: all .5s;
+      border-bottom: 2px solid #843;
+    }
+    
+    
+    .menu--menuSub li:nth-child(2):hover {
+        transition: all .5s;
+        border-bottom: 2px solid #813;
+      }
+    
+    
+      .menu--menuSub li:nth-child(3):hover {
+        transition: all .5s;
+        border-bottom: 2px solid #193;
+      }
+    
+      
+    .menu--menuSub li:nth-child(4):hover {
+        transition: all .5s;
+        border-bottom: 2px solid #383923;
+      }
+    
+      
+    .menu--menuSub li:nth-child(5):hover {
+        transition: all .5s;
+        border-bottom: 2px solid rgb(202, 0, 209);
+      }
+    
+      
+    .menu--menuSub li:nth-child(6):hover {
+        transition: all .5s;
+        border-bottom: 2px solid rgb(124, 8, 233);
+      }
+    
+      .menu--menuSub li:nth-child(7):hover {
+        transition: all .5s;
+        border-bottom: 2px solid rgb(194, 194, 194);
+      }
+    
+    
+      .menu--menuSub li:nth-child(8):hover {
+        transition: all .5s;
+        border-bottom: 2px solid rgb(8, 233, 233);
+      }
+    
+      
+      .menu--menuSub li:nth-child(9):hover {
+        transition: all .5s;
+        border-bottom: 2px solid rgb(199, 233, 8);
+      }
+    
+    
+    .dropdown:hover .menu--menuSub {
+        top: 50px;
+        opacity: 2;
+        visibility: visible;
+    }
+    
+  
+}
